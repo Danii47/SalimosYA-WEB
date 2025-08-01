@@ -1,3 +1,4 @@
+import { Capacitor } from "@capacitor/core"
 import { useCallback, useState } from "react"
 
 type METHOD = "GET" | "POST" | "PATCH" | "PUT" | "DELETE"
@@ -8,7 +9,8 @@ export function useFetch() {
   const [error, setError] = useState<null | string>(null)
 
   const doFetch = useCallback(async (url: RequestInfo | URL, method: METHOD = "GET", data = {}) => {
-    alert(url)
+    const isNative = Capacitor.isNativePlatform()
+
     setLoading(true)
     setError(null)
     try {
@@ -17,7 +19,7 @@ export function useFetch() {
         headers: {
           "Content-Type": "application/json"
         },
-        credentials: "include",
+        ...(isNative ? {} : { credentials: "include" }),
         body: method !== "GET" ? JSON.stringify(data) : null
       })
 
@@ -31,7 +33,6 @@ export function useFetch() {
 
       return { data: json, error: null }
     } catch (err) {
-      alert(err)
       if (err instanceof Error) {
         setError(err.message)
         return { data: null, error: err.message }
