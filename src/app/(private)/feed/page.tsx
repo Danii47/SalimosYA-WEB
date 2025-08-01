@@ -1,12 +1,18 @@
 "use client"
 
-import { useRequireAuth } from "../../../hooks/useRequiredAuth"
+import { useRequireAuth } from "@/hooks/useRequiredAuth"
+import { useAuth } from "../../../context/AuthContext"
 import Image from "next/image"
 
 export default function Dashboard() {
+  const { logout } = useAuth()
   const { user, loading } = useRequireAuth()
 
   if (loading) return <p>Cargando...</p>
+
+  const handleLogout = async () => {
+    await logout()
+  }
 
   return (
     <div>
@@ -27,6 +33,7 @@ export default function Dashboard() {
               className="rounded-full"
             />
           )}
+          <button onClick={handleLogout}>Logout</button>
         </>
       )}
       <p>Contenido privado</p>
