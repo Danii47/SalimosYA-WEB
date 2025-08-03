@@ -1,7 +1,7 @@
 "use client"
 
 import { useRequireAuth } from "@/hooks/useRequiredAuth"
-import { useAuth } from "../../../context/AuthContext"
+import { useAuth } from "@/context/AuthContext"
 import Image from "next/image"
 
 export default function Dashboard() {
