@@ -22,5 +22,25 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  .clip-diagonal-right {
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+  }
+
+  .clip-diagonal-left {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* TODO: Change the color depending of user preferences */
+/* Ajustes al popup de leaflet */
+/* .leaflet-popup.custom-popup .leaflet-popup-content-wrapper {
+  @apply bg-white rounded-lg p-4 shadow-lg;
+}
+
+.leaflet-popup.custom-popup .leaflet-popup-tip {
+  @apply bg-white;
+} */
