@@ -6,6 +6,7 @@ export default function PrivateLayout({ children }: { children: React.ReactNode 
         <Link href="/feed">Feed</Link>
         <Link href="/search">Buscar</Link>
         <Link href="/profile">Perfil</Link>
+        <Link href="/map">MAPA</Link>
         {/* Enlazar a logout mediante onClick en AuthProvider */}
       </nav>
       {children}
