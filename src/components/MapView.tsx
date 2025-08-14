@@ -21,8 +21,8 @@ type LocalsType = {
 const MY_COORDS: LatLngExpression = [40.4168, -3.7038]
 
 const LOCALS: LocalsType[] = [
-  { address: "C/ Toledo, 86, Madrid, Spain 28005", name: "Shoko Madrid", pos: [40.4168, -3.7038], avatar: "https://media.discordapp.net/attachments/952540649322860584/1401705051046543421/459486322_739101345009792_8827784081967403956_n.jpg?ex=68948ace&is=6893394e&hm=94dd5a14c879bf9b354696571ad7a582215907496a55246bf30842e4861cbd65&=&format=webp&width=165&height=165"},
-  { address: "C/ Toledo, 86, Madrid, Spain 28005", name: "Razzmatazz", pos: [40.4168, -3.7048], avatar: "https://media.discordapp.net/attachments/952540649322860584/1401706078973984879/325829368_100504782944058_4590624841775239610_n.jpg?ex=68948bc3&is=68933a43&hm=12699ae321a29793af1a142c68e6cbfabfb0ab0530cb3ca50ca4856f1f3dc651&=&format=webp&width=165&height=165"},
+  { address: "C/ Toledo, 86, Madrid, Spain 28005", name: "Shoko Madrid", pos: [40.4168, -3.7038], avatar: "https://media.discordapp.net/attachments/952540649322860584/1401705051046543421/459486322_739101345009792_8827784081967403956_n.jpg?ex=68948ace&is=6893394e&hm=94dd5a14c879bf9b354696571ad7a582215907496a55246bf30842e4861cbd65&=&format=webp&width=165&height=165" },
+  { address: "C/ Toledo, 86, Madrid, Spain 28005", name: "Razzmatazz", pos: [40.4168, -3.7048], avatar: "https://media.discordapp.net/attachments/952540649322860584/1401706078973984879/325829368_100504782944058_4590624841775239610_n.jpg?ex=68948bc3&is=68933a43&hm=12699ae321a29793af1a142c68e6cbfabfb0ab0530cb3ca50ca4856f1f3dc651&=&format=webp&width=165&height=165" },
   // { address: "C/ Toledo, 86, Madrid, Spain 28005", name: "Black Pearl", pos: [40.4168, -3.7058], avatar: "https://media.discordapp.net/attachments/952540649322860584/1401704946650316920/482449353_2010945336083565_9171959327985736811_n.jpg?ex=6891e7b5&is=68909635&hm=f2c698b67848fdfd2867eebbd6f637be2587e8dc9138d31e667a2cf5825ddbb5&=&format=webp&width=165&height=165"},
   // { address: "C/ Toledo, 86, Madrid, Spain 28005", name: "Occo Club", pos: [40.4178, -3.7038], avatar: "https://media.discordapp.net/attachments/952540649322860584/1401705051046543421/459486322_739101345009792_8827784081967403956_n.jpg?ex=6891e7ce&is=6890964e&hm=0721c24286ffd10f6acd3142d6cd8904da68ed63a8eddd01be7dde49d5a18aad&=&format=webp&width=165&height=165"},
   // { address: "C/ Toledo, 86, Madrid, Spain 28005", name: "Rosé THE CLUB", pos: [40.4178, -3.7048], avatar: "https://media.discordapp.net/attachments/952540649322860584/1401706078973984879/325829368_100504782944058_4590624841775239610_n.jpg?ex=6891e8c3&is=68909743&hm=397f01ed13b12369aa335b093bc9b69c579279fc781ec1042ceb2928b951bdbc&=&format=webp&width=165&height=165"},
@@ -49,7 +49,7 @@ export default function MapView({ username }: { username?: string }) {
     const createIcons = async () => {
       const userIcon = new L.Icon({
         iconUrl: await createRoundedImageWithStroke({
-          imageUrl: "https://media.discordapp.net/attachments/665599910476775467/1400500617734258841/image.png?ex=6894c657&is=689374d7&hm=236ea139c1f31076390798bf9a92952304cbbe3edf44fdb30e7acd91f05d8bda&=&format=webp&quality=lossless&width=163&height=161",
+          imageUrl: "https://media.discordapp.net/attachments/665599910476775467/1400500617734258841/image.png?ex=689f5257&is=689e00d7&hm=f3385e5f4d03ea649fa766029ed174258961ca9c3029412fc20a7220d3848bf9&=&format=webp&quality=lossless",
           diameter: 64,
           strokeWidth: 6,
           strokeColor: "#f00",
